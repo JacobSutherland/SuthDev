@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap');
+
+/* ============ Index ============ */
+/* 
+1 Resets
+
+2 variables
+
+3 typography
+
+4 layout
+
+ ============ tablet Styles ============
+2.1 variables
+
+3.1 typography
+
+4.1 layout
+
+ ============ mobile styles ============
+
+2.2 varibales
+
+3.2 typography
+
+4.2 layout
+
+*/
+
+/* ============ Resets ============ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* ============ Variables ============ */
+:root {
+    --general-font-size: 2.4rem;
+    --header-nav-links-font-size: 2.4rem;
+    --nav-links-font-size: 2.4rem;
+    --marquee-font-size: 6rem;
+    --btn-font-size: 1.8rem;
+    --section-headings-font-size: 3.6rem;
+    --services-headings-font-size: 2.4rem;
+    --services-font-size: 1.8rem;
+    --services-btn-font-size: 1.4rem;
+    --footer-text-font-size: 2.4rem;
+    --footer-nav-font-size: 2.4rem;
+    --quotes-size: 9.6rem;
+    --labels-font-size: 1.8rem;
+
+    --general-font-color: black;
+    --marquee-font-color: white;
+    --btn-font-color: white;
+    --cta-btn-font-color: black;
+    --services-card-font-color: white;
+    --footer-font-color: white;
+
+    --btn-color: black;
+    --cta-btn-color: white;
+    
+}
+
+/* ============ Typograpghy ============ */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif, 'times-new-roman';
+}
+
+h2 {
+    font-size: var(--section-headings-font-size);
+
+}
+
+p {
+    font-size: var(--general-font-size);
+    color: var(--general-font-color);
+}
+
+a {
+    font-size: var(--header-nav-links-font-size);
+    color: var(--general-font-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header a {
+    margin-right: 3rem;
+}
+
+.marquee h2 {
+    font-family: 'livvic', sans-serif, 'times-new-roman';
+    font-size:  var(--marquee-font-size);
+    font-weight: bold;
+    color: var(--marquee-font-color);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-align: left;
+
+}
+
+.btn {
+    font-size: var(--btn-font-size);
+    color: var(--btn-font-color);
+}
+
+.card-btn {
+    font-size: var(--services-btn-font-size);
+    color: var(--services-card-font-color);
+    background-color: var(--btn-color);
+}
+
+.quote {
+    font-size: var(--quotes-size);
+}
+
+label {
+    font-size: var(--labels-font-size);
+}
+
+
+/* ============ Layout ============ */
+
+.drop-down {
+    display: none;
+}
+
+.exit {
+    display: none;
+}
+
+.logo {
+    height: 7rem;
+} 
+
+#home {
+    height: 100vh;
+    background-image: url('images/jason-briscoe-AQl-J19ocWE-unsplash.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: rgba(255,255,255,0.7);
+}
+
+header nav a:hover {
+border-bottom: 2px solid black;
+}
+
+.marquee {
+    background-color: rgba(0, 0, 0, .4);
+    width: 55%;
+    margin: 5rem 5rem;
+    padding: 5rem;
+}
+
+#home .btn {
+    display: block;
+    background-color: black;
+    text-align: center;
+    line-height: 2.7;
+    width: 25rem;
+    height: 5rem;
+    margin-left: 5rem;
+    margin-top: -3rem;
+    cursor: pointer;
+}
