@@ -20,9 +20,9 @@
 
  ============ mobile styles ============
 
-2.2 varibales
+2.2 varibales - 476
 
-3.2 typography
+3.2 typography - 478
 
 4.2 layout
 
@@ -89,7 +89,7 @@ table {
 :root {
     --general-font-size: 1.8rem;
     --header-nav-links-font-size: 1.8rem;
-    --nav-links-font-size: 1.8rem;
+    --footer-nav-font-size: 1.4rem;
     --marquee-font-size: 6rem;
     --btn-font-size: 1.8rem;
     --section-headings-font-size: 3.6rem;
@@ -98,7 +98,7 @@ table {
     --services-btn-font-size: 1.4rem;
     --footer-text-font-size: 1.8rem;
     --footer-nav-font-size: 1.8rem;
-    --quotes-size: 9.6rem;
+    --quotes-size: 5rem;
     --labels-font-size: 1.8rem;
 
     --general-font-color: #343434;
@@ -150,7 +150,7 @@ header a {
 .marquee h2 {
     font-family: 'livvic', sans-serif, 'times-new-roman';
     font-size:  var(--marquee-font-size);
-    font-weight: bold;
+    font-weight: 900;
     color: var(--marquee-font-color);
     text-transform: uppercase;
     text-align: center;
@@ -171,7 +171,7 @@ header a {
 }
 
 .quote {
-    font-size: var(--quotes-size);
+    font-size: calc(var(--quotes-size) + 1vw);
     color: white;
     font-weight: bold;
 }
@@ -188,12 +188,11 @@ label {
 
 #about p {
     color: white;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .services-heading {
-    margin-top: 5rem;
-    margin-left: 5rem;
+    margin: 5rem;
     text-transform: uppercase;
     
 }
@@ -224,6 +223,10 @@ label {
     font-weight: bold;
 }
 
+button {
+    font-family: 'Red Hat Display', sans-serif, 'times-new-roman';
+}
+
 footer p {
     color: white;
 }
@@ -231,7 +234,7 @@ footer p {
 footer nav a {
     color: white;
     margin: 2rem;
-    font-size: var(--general-font-size);
+    font-size: var(--footer-nav-font-size);
 }
 
 /* ============ Layout ============ */
@@ -250,7 +253,8 @@ footer nav a {
 
 #home {
     height: 100vh;
-    background-image: url('images/jason-briscoe-AQl-J19ocWE-unsplash.jpg');
+    background-image: url('images/jens-behrmann-Iy3OdKaszJs-unsplash.jpg');
+    filter: brightness(1.4);
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -268,7 +272,7 @@ border-bottom: 2px solid black;
 }
 
 .marquee {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .58);
     width: 50%;
     margin: 5rem 5rem;
     padding: 5rem;
@@ -296,7 +300,7 @@ border-bottom: 2px solid black;
     position: relative;
     overflow: hidden;
     width: 80%;
-    height: 30rem;
+    height: 40%;
     margin: 5rem auto;
 }
 
@@ -324,15 +328,14 @@ border-bottom: 2px solid black;
 
 .about-card {
     position: relative;
-    padding: 7rem;
+    padding: 3%;
     background-color: #343434;
     height: 100%;
+    overflow: hidden;
 }
 
 .quote:nth-of-type(2){
-    /* position: absolute;
-    right: 5rem;
-    top: 25rem; */
+    display: block;
     margin-left: 97%;
 }
 
@@ -345,6 +348,10 @@ border-bottom: 2px solid black;
 }
 
 .services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     flex-grow: 1;
     line-height: 2.5rem;
     width: 25rem;
@@ -355,8 +362,10 @@ border-bottom: 2px solid black;
 }
 
  i {
+     display: inline-block;
+     text-align: center;
      font-size: 5rem;
-     margin: 2rem 40% 2rem 40%;
+     margin: 2rem;
  }
 
 .card-btn {
@@ -394,9 +403,10 @@ aside {
     height: 35rem;
     background-color: white; 
     width: 20rem;
-    line-height: 1.7;
+    line-height: 1.5;
     padding: 3rem;
     box-shadow: -1px 5px 26px -4px rgba(0,0,0,0.75);
+    overflow: hidden;
 }
 
 aside .btn {
@@ -410,15 +420,11 @@ aside .btn {
     margin: 5rem auto;
 }
 
-#contact {
-    height: 100vh;
-}
-
 form {
     box-shadow: -1px 5px 26px -4px rgba(0,0,0,0.75);
     margin: 0 auto;
     width: 90%;
-    height:70rem;
+    height:75rem;
     padding: 5rem;
 }
 
@@ -453,8 +459,10 @@ button {
     height: 5rem;
     line-height: 2.2;
     text-align: center;
-    margin-left: 6rem;
+    margin-left: 5%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 footer {
@@ -463,8 +471,297 @@ footer {
     padding: 5rem;
     background-color: #343434; 
     height: 10rem;
+    margin-top: 10rem;
+    overflow: hidden;
 }
 
 footer nav a:hover {
     border-bottom: 1px solid white;
+}
+    /* ============ Tablet Styles ============ */
+@media(max-width: 830px){
+    /* ============ Variables ============ */
+:root {
+    --general-font-size: 1.4rem;
+    --header-nav-links-font-size: 1.8rem;
+    --nav-links-font-size: 1rem;
+    --marquee-font-size: 3rem;
+    --btn-font-size: 1.4rem;
+    --section-headings-font-size: 2.4rem;
+    --services-headings-font-size: 2.4rem;
+    --services-font-size: 1.8rem;
+    --services-btn-font-size: 1.4rem;
+    --footer-text-font-size: 1.8rem;
+    --footer-nav-font-size: 1.2rem;
+    --quotes-size: 6rem;
+    --labels-font-size: 1.8rem;
+
+    --general-font-color: #343434;
+    --marquee-font-color: white;
+    --btn-font-color: white;
+    --cta-btn-font-color: #343434;
+    --services-card-font-color: #343434;
+    --footer-font-color: white;
+    --section-headings-color: #343434;
+
+    --btn-color: #343434;
+    --cta-btn-color: white;
+    
+}
+
+/* ============ Typography ============ */
+
+.header-nav a {
+    color: white;
+}
+
+#home .btn {
+    line-height: 5rem;
+}
+
+aside .btn {
+    line-height: 5rem;
+}
+
+form p {
+    margin: 2rem;
+}
+
+.footer-nav a {
+    font-size: var(--footer-nav-font-size);
+    margin: 1rem;
+}
+
+/* ============ Javascript Appplied Classes ============ */
+
+/* Drop Down Menu Open */
+/* .open {
+width: 100%;
+right: 0;
+   position: absolute;
+   top: 0;
+   right: -150rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 100vh;
+background-color: var(--btn-color);
+}  */
+
+/* adds exit icon to drop-down menu */
+/* .exit-open {
+    display: block;
+    z-index: 2;
+    color: white;
+    height: 3rem;
+} */
+
+/* ============ Layout ============ */
+
+header {
+    overflow: hidden;
+}
+
+header nav {
+   transition: all .7s;
+   display: none;
+}
+
+
+
+.drop-down {
+    display: block;
+    height: 7rem;
+}
+
+.marquee {
+    background-color: rgba(0, 0, 0, .59);
+    width: 55%;
+    margin: 10rem 0 5rem 5rem;
+    padding: 5rem;
+}
+
+#home .btn {
+    width: 55%;
+}
+
+
+#about {
+    height: auto;
+}
+
+#about img {
+    width: 100%;
+    height: 45rem;
+}
+
+.about-card {
+    padding: 2rem;
+}
+
+.call-to-action-container img {
+   display: none;
+}
+
+aside {
+    line-height: 2.5;
+}
+
+#contact {
+    height: auto;
+}
+
+button {
+    width: 90%;
+    margin-left: 4.5%;
+}
+
+
+}
+
+    /* ============ Mobile Styles ============ */
+    @media(max-width: 600px){
+        /* ============ Variables ============ */
+    :root {
+        --general-font-size: 1.4rem;
+        --header-nav-links-font-size: 1.8rem;
+        --nav-links-font-size: 1rem;
+        --marquee-font-size: 3rem;
+        --btn-font-size: 1.2rem;
+        --section-headings-font-size: 2.4rem;
+        --services-headings-font-size: 2.4rem;
+        --services-font-size: 1.8rem;
+        --services-btn-font-size: 1.4rem;
+        --footer-text-font-size: 1.8rem;
+        --footer-nav-font-size: 1.2rem;
+        --quotes-size: 6rem;
+        --labels-font-size: 1.8rem;
+    
+        --general-font-color: #343434;
+        --marquee-font-color: white;
+        --btn-font-color: white;
+        --cta-btn-font-color: #343434;
+        --services-card-font-color: #343434;
+        --footer-font-color: white;
+        --section-headings-color: #343434;
+    
+        --btn-color: #343434;
+        --cta-btn-color: white;
+        
+    }
+    
+    /* ============ Typography ============ */
+    
+    aside .btn {
+        font-size: var(--btn-font-size);
+        line-height: 3rem;
+    }
+
+    aside {
+        line-height: 2rem;
+    }
+    
+    /* ============ Layout ============ */
+
+    #home {
+        height: 100vh;
+    }
+    .logo {
+        height: 6rem;
+        margin-left: -5rem;
+    }
+
+    .drop-down{
+        height: 2.5rem;
+    }
+
+    .marquee {
+        width: 80%;
+        margin:2rem auto 0 auto;
+        background-color: rgba(0, 0, 0, 0.5);
+
+    }
+
+    #home .btn {
+        width: 80%;
+        margin: 3rem auto 0rem auto;
+    }
+
+    .gallery-container {
+        width: 90%;
+    }
+    
+    .gallery-container img {
+        width: 24%;
+        height: 100%;
+        margin-left: 1rem;
+        flex-grow: 1;
+    }
+
+    .services-card {
+    line-height: 2rem;
+    margin:3rem;
+    }
+
+    aside .btn {
+        margin-top: 3rem;
+        height: 3rem;
+    }
+
+    .call-to-action-container {
+        background-color: #343434;
+        border: 1px solid #343434;
+    }
+    
+    .positioning-container {
+        padding: 1.5rem;
+    }
+
+    form {
+        height: auto;
+        padding: 2rem;
+    }
+    
+    label {
+        margin: 1rem auto;
+        margin-left: 5%;
+    }
+    
+    input {
+        height: 3rem;
+        font-size: 1.2rem; 
+    }
+    
+    textarea {
+        height: 25rem;
+        font-size: 1.2rem; 
+    }
+    
+    button {
+        width: 90%;
+    }
+
+    form p {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    footer p {
+        margin-left: -4rem;
+    }
+
+    .footer-nav {
+        margin-right: -4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer nav a:hover {
+        border-bottom: unset;
+    }
 }
