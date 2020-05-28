@@ -534,38 +534,42 @@ form p {
 
 /* ============ Javascript Appplied Classes ============ */
 
-/* Drop Down Menu Open */
-/* .open {
-width: 100%;
-right: 0;
+/* Positions Drop Down Menu to fill screen */
+.open {
+    right: 0;
+} 
+
+/* adds exit icon to drop-down menu when open */
+.exit-open {
+    display: block;
+    z-index: 2;
+    height: 3rem;
+} 
+
+/* remove drop down menu icon when menu is opened */
+.remove-drop-down-icon {
+    displaY: none;
+}
+
+/* ============ Layout ============ */
+
+#home{
+    position: relative;
+    overflow: hidden;
+}
+
+header nav {
    position: absolute;
+   transition: all .3s;
    top: 0;
-   right: -150rem;
+   right: -1000px;
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
    height: 100vh;
-background-color: var(--btn-color);
-}  */
-
-/* adds exit icon to drop-down menu */
-/* .exit-open {
-    display: block;
-    z-index: 2;
-    color: white;
-    height: 3rem;
-} */
-
-/* ============ Layout ============ */
-
-header {
-    overflow: hidden;
-}
-
-header nav {
-   transition: all .7s;
-   display: none;
+   background-color: var(--btn-color);
 }
 
 
